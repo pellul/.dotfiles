@@ -191,3 +191,5 @@ gaps inner 20
 #bar {
 #        status_command i3status
 #}
+
+exec_always --no-startup-id compton --config $HOME/.config/compton.conf
