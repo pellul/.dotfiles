@@ -1,12 +1,13 @@
 [colors]
 accent = #fba922
+secondary = #ff0000 ; red for testing purposes
 background = #1f1f1f
 
 [bar/top]
 enable-ipc = true
 monitor = ${env:MONITOR:}
 width = 100%
-height = 27
+height = 20
 
 background = ${colors.background}
 foreground = #eeeeee
@@ -14,8 +15,6 @@ foreground = #eeeeee
 border-bottom-size = 1
 border-bottom-color = #333333
 
-overline-size = 5
-overline-color = ${colors.background}
 underline-size = 4
 underline-color = ${colors.background}
 
@@ -30,53 +29,12 @@ font-2 = Termsynu:size=8;0
 font-3 = Siji:pixelsize=10;1
 font-4 = FontAwesome:size=10;0
 
-;modules-left = powermenu
 modules-left = i3
-;modules-center = xwindow
-modules-right = pulseaudio cpu memory wireless-network wired-network battery clock powermenu 
+modules-center =
+modules-right = pulseaudio cpu memory wireless-network wired-network battery clock powermenu
 
 wm-restack = i3
 tray-position = right
-
-
-[bar/external]
-enable-ipc = true
-monitor = ${env:MONITOR:}
-bottom = true
-;dock = true
-width = ${bar/bottom.width}
-height = ${bar/bottom.height}
-
-background = ${bar/bottom.background}
-foreground = ${bar/bottom.foreground}
-
-underline-size = ${bar/bottom.underline-size}
-underline-color = ${bar/bottom.underline-color}
-overline-size = ${bar/bottom.overline-size}
-overline-color = ${bar/bottom.overline-color}
-
-border-bottom-size = ${bar/bottom.border-bottom}
-;;border-bottom.color = ${bar/bottom.border-bottom-color}
-
-spacing = ${bar/bottom.spacing}
-padding-left = ${bar/bottom.padding-left}
-padding-right = ${bar/bottom.padding-right}
-module-margin-left = 0
-module-margin-right = ${bar/bottom.module-margin-right}
-
-font-0 = ${bar/bottom.font-0}
-font-1 = ${bar/bottom.font-1}
-font-2 = ${bar/bottom.font-2}
-font-3 = ${bar/bottom.font-3}
-font-4 = ${bar/bottom.font-4}
-font-5 = ${bar/bottom.font-5}
-
-modules-left = i3
-modules-center = xwindow
-modules-right = fs-root clock
-
-wm-restack = ${bar/bottom.wm-restack}
-
 
 [module/fs-root]
 type = internal/fs
@@ -125,7 +83,6 @@ interactive = true
 
 [module/i3]
 type = internal/i3
-;format = <label-mode>
 format = <label-state> <label-mode>
 pin-workspaces = true
 
@@ -165,63 +122,23 @@ label-visible-padding = 4
 
 [module/cpu]
 type = internal/cpu
-interval = 1.5
+interval = .5
 
-format = <label> <ramp-coreload>
+format = <label>
 format-padding = 5
 
-label = CPU
+label = CPU %percentage%%
 label-font = 3
 label-foreground = #999999
-
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
 
 [module/memory]
 type = internal/memory
 interval = 0.2
-format = <label> <bar-used>
+format = <label>
 
-label = RAM
+label = RAM %gb_used%
 label-font = 3
 label-foreground = #999999
-
-bar-used-width = 30
-bar-used-gradient = true
-bar-used-foreground-0 = #449f3d
-bar-used-foreground-1 = #2f8419
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ed5456
-bar-used-indicator = █
-bar-used-indicator-font = 5
-bar-used-indicator-foreground = #ffffff
-bar-used-fill = █
-bar-used-fill-font = 5
-bar-used-empty = █
-bar-used-empty-font = 5
-bar-used-empty-foreground = #444444
 
 [module/wireless-network]
 type = internal/network
@@ -259,9 +176,8 @@ label-disconnected-foreground = #666666
 type = internal/date
 interval = 5
 format-padding = 5
-format-background = ${colors.background}
-format-foreground = #ffffff
-date = %%{F#bbbbbb}%Y-%m-%d%%{F-}  %%{F#eeeeee}%H:%M%%{F-}
+
+date = %Y-%m-%d %H:%M
 
 [module/volume]
 type = internal/alsa
@@ -299,11 +215,6 @@ label-charging-font = 3
 label-discharging-font = 3
 label-full =
 ;label-full-font = 3
-
-[module/xwindow]
-type = internal/xwindow
-label-maxlen = 75
-label-foreground = #bbbbbb
 
 [module/powermenu]
 type = custom/menu
@@ -350,28 +261,9 @@ type = internal/pulseaudio
 ; If not, uses default sink
 sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true; Available tags:
-;   <label-volume> (default)
-;   <ramp-volume>
-;   <bar-volume>
 format-volume = <ramp-volume> <label-volume>
 
-; Available tags:
-;   <label-muted> (default)
-;   <ramp-volume>
-;   <bar-volume>
-;format-muted = <label-muted>
-
-; Available tokens:
-;   %percentage% (default)
-;   %decibels%
-;label-volume = %percentage%%
-
-; Available tokens:
-;   %percentage% (default)
-;   %decibels%
-label-muted = 🔇 muted
+label-muted = muted
 label-muted-foreground = #666
 
 ; Only applies if <ramp-volume> is used
@@ -379,9 +271,8 @@ ramp-volume-0 = 🔈
 ramp-volume-1 = 🔉
 ramp-volume-2 = 🔊
 
-; Right and Middle click
+; Right click
 click-right = pavucontrol
-; click-middle = 
 use-ui-max = true
 
 ; Interval for volume increase/decrease (in percent points)
