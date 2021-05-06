@@ -32,4 +32,8 @@ TODO:
 
 - provide explanations use it all
 
-- improve feh to allow customized wallpaper depending on the desktop
+- improve feh to allow customized wallpaper depending on the desktop 
+
+- generate background with triangulation using [triangula](https://github.com/RH12503/triangula)
+
+`convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) /home/pierre/Desktop/wallpaper.png test.png && i3lock -i test.png`
