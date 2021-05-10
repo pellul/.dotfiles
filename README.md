@@ -34,7 +34,9 @@ TODO:
 
 - list fixes to occuring bugs (ssh-agent, etc...)
 
-- provide explanations use it all
+- find a color palette to apply (hollow knight inspired?)
+
+- provide comments and setup explanations
 
 - improve feh to allow customized wallpaper depending on the desktop 
 
@@ -45,5 +47,11 @@ TODO:
 - Toggle polybar to have "zen mode" [link](https://parasurv.neocities.org/hide-bar-i3wm.html)
 
 - Learn more from [this guy](https://github.com/Rashad-707/wall-tile) 😍
+
+- Take a look a picom (instead of compton) https://github.com/yshui/picom
+
+- Open [neofetch](https://github.com/dylanaraps/neofetch) on start 
+
+- Make emacs installation file + change colors according to the palette
 
 `convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) /home/pierre/Desktop/wallpaper.png test.png && i3lock -i test.png`
