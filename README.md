@@ -26,6 +26,10 @@ tmux
 
 emacs 
 
+xss-lock
+
+ImageMagick
+
 TODO:
 
 - list fixes to occuring bugs (ssh-agent, etc...)
