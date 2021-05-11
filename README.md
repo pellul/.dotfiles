@@ -8,7 +8,7 @@ i3-gaps
 
 compton (pimp my windows)
 
-tilda (dropdown term)
+alacritty + zsh
 
 rofi (dmenu alternative)
 
