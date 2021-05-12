@@ -1,6 +1,6 @@
 [user]
-    name = ***** *****
-    email = *******@****.**
+    name = Pierre Ellul
+    email = 7912093+pellul@users.noreply.github.com
 [core]
     editor = emacsclient -t
     edit = emacsclient -t
