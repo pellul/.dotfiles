@@ -41,7 +41,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -175,14 +175,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id feh --bg-scale /home/pellul/Images/wallpaper.png
+exec_always --no-startup-id $HOME/.config/wallpaper/.fehbg
 exec --no-startup-id conky -c ~/path/to/.conkyrc
 exec --no-startup-id xrandr --output HDMI-1-3 --auto --left-of HDMI-1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $mod+Shift+l exec "i3lock -t -i /home/pellul/Images/wallpaper.png"
+# bindsym $mod+Shift+l exec "i3lock -t -i /home/pellul/Images/wallpaper.png"
+bindsym $mod+Shift+l exec --no-startup-id "xss-lock -- xscreensaver-command -lock & ~/.config/i3/scripts/i3lock.sh"
+
 for_window [class=".*"] border pixel 2
-#for_window [class=".*"] client.focused #ffffff
 #smart_gaps on
 #smart_borders on
 gaps outer 5
