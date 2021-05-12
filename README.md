@@ -10,7 +10,7 @@ i3-gaps
 
 compton (pimp my windows)
 
-alacritty + zsh
+kitty + zsh
 
 rofi (dmenu alternative)
 
