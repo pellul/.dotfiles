@@ -42,6 +42,8 @@ TODO:
 
 - find a color palette to apply (hollow knight inspired?)
 
+- take a look at [pywal](https://github.com/dylanaraps/pywal/wiki/Getting-Started) 
+
 - provide comments and setup explanations
 
 - improve feh to allow customized wallpaper depending on the desktop 
@@ -52,6 +54,6 @@ TODO:
 
 - Learn more from [this guy](https://github.com/Rashad-707/wall-tile) 😍
 
-- Take a look a picom (instead of compton) https://github.com/yshui/picom
+- Take a look at picom (instead of compton) https://github.com/yshui/picom
 
 - Make emacs installation file + change colors according to the palette
