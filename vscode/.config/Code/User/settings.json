@@ -1,0 +1,58 @@
+{
+    // telemetry
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // display
+    "editor.rulers": [80, 100],
+    "editor.minimap.size": "fit",
+    "editor.minimap.side": "left",
+    "window.zoomLevel": 0,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
+
+    // auto-format
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    // per language syntax
+    "[javascript]": {
+        "editor.tabSize": 2,
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[vue]": {
+        "editor.tabSize": 2
+    },
+    "[sass]": {
+        "editor.tabSize": 2
+    },
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+
+    // features
+    "explorer.autoReveal": false,
+    "workbench.startupEditor": "newUntitledFile",
+
+    // extensions
+    // Python
+    "python.showStartPage": false,
+    // Jest
+    "jest.enableCodeLens": false,
+    // Emmet
+    "emmet.includeLanguages": {
+        "blade": "html"
+    },
+    "blade.format.enable": true,         // if you would like to enable blade format
+    "emmet.triggerExpansionOnTab": true,
+    // Bracket Pair Colorizer 2
+    "bracket-pair-colorizer-2.forceIterationColorCycle": true,
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "all",
+    "window.menuBarVisibility": "compact",
+}
