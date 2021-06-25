@@ -6,6 +6,15 @@ img=$(mktemp /tmp/XXXXXXXXXX.png)
 waifu=$(find ./images -maxdepth 1 -type f -printf "%f\n" | sort -R | head -1)
 gravity=${waifu%_*}
 
+quote=$(cat ./quotes/kaamelott.txt | sort -R | head -1 | fold -sw 75)
+minfontsize=30
+fontsize=$((50 - ${#quote} / 20))
+((fontsize < minfontsize)) && fontsize=$minfontsize
+
+#echo $quote
+#echo ${#quote}
+#echo $fontsize
+
 # screenshot
 import -window root $img &
 shot_pid=$!
@@ -20,10 +29,13 @@ do
     sleep 0.1
 done
 
-convert $img -scale 10% -scale 1000% -quality 1 miff:- | \
+convert $img \
+    -scale 10% -scale 1000% -quality 1 \
+    -gravity NorthWest -fill black -pointsize $fontsize -annotate +103+153 "$quote" \
+    -gravity NorthWest -fill white -pointsize $fontsize -annotate +100+150 "$quote" miff:- | \
     composite -gravity $gravity ./images/$waifu miff:- $img &&
     kill $lock_pid
-i3lock -n -t -u -i $img
+i3lock -utni $img
 
 rm $img
 popd
