@@ -1,4 +1,52 @@
 (require 'package)
+(setq package-selected-packages
+  '(afternoon-theme
+    ag
+    async
+    counsel
+    counsel-projectile
+    dash
+    diff-hl
+    edit-indirect
+    editorconfig
+    emmet-mode
+    epl
+    expand-region
+    git-commit
+    helm
+    helm-core
+    highlight-parentheses
+    ivy
+    magit
+    mmm-mode
+    move-dup
+    multiple-cursors
+    nadvice
+    neotree
+    ob-sql-mode
+    php-mode
+    pkg-info
+    popup
+    projectile
+    projectile-git-autofetch
+    python-mode
+    s
+    spacegray-theme
+    ssass-mode
+    swiper
+    swiper-helm
+    tabbar
+    telephone-line
+    transient
+    tt-mode
+    twig-mode
+    vscode-dark-plus-theme
+    vue-html-mode
+    vue-mode
+    with-editor
+    xclip))
+(package-install-selected-packages)
+
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
@@ -15,7 +63,7 @@
  '(neo-window-position (quote right))
  '(package-selected-packages
    (quote
-    (dtrt-indent highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
+    (twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -87,7 +135,7 @@
 
 ;; multiple-cursors conf
 ;;(global-set-key (kbd "H-spac") 'set-rectangular-region-anchor)
-
+(setq neo-window-width 55)
 (defun neotree-project-dir ()
   "Open NeoTree using the git root."
   (interactive)
@@ -189,3 +237,7 @@
 (global-highlight-parentheses-mode t)
 
 (which-function-mode -1)  ;; disable by default due to performance issues
+(put 'downcase-region 'disabled nil)
+
+(editorconfig-mode 1)
+(add-hook 'find-file-hook 'editorconfig-mode-apply)
