@@ -30,12 +30,22 @@ do
 done
 
 convert $img \
-    -scale 10% -scale 1000% -quality 1 \
-    -gravity NorthWest -fill black -pointsize $fontsize -annotate +103+153 "$quote" \
-    -gravity NorthWest -fill white -pointsize $fontsize -annotate +100+150 "$quote" miff:- | \
+    -scale 10% -scale 1000% -quality 1 miff:- |\
+    # -gravity NorthWest -fill black -pointsize $fontsize -annotate +103+153 "$quote" \
+    # -gravity NorthWest -fill white -pointsize $fontsize -annotate +100+150 "$quote" miff:- | \
     composite -gravity $gravity ./images/$waifu miff:- $img &&
     kill $lock_pid
-i3lock -utni $img
 
+i3lock -utni $img &
+lock_pid=$!
+
+sleep 2.0 && ./quotes/quotes.sh
+while [ -n "$lock_pid" -a -e /proc/$lock_pid ]
+do
+    sleep 10.0
+    ./quotes/quotes.sh
+done
+
+killall dunst
 rm $img
 popd
