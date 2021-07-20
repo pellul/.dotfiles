@@ -1,6 +1,6 @@
 # Readme
 
-⚠️ Work In Progress ⚠️
+⚠️  Work In Progress ⚠️
 
 ## Dependencies
 
@@ -59,3 +59,8 @@ TODO:
 - Take a look at picom (instead of compton) https://github.com/yshui/picom
 
 - Make emacs installation file + change colors according to the palette
+
+----
+
+systemctl enable --user emacs
+systemctl start --user emacs
