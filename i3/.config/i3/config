@@ -213,6 +213,6 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
 
 for_window [title="neofetch"] floating enable, resize set 628 404, border pixel 5, sticky enable
-exec_always --no-startup-id "kitty --title neofetch sh -c 'neofetch; read x'
+exec_always --no-startup-id "kitty --title neofetch sh -c 'neofetch; read x'"
 
 focus_follows_mouse no

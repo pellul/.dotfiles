@@ -1,4 +1,30 @@
 (require 'package)
+
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(global-superword-mode t)
+ '(global-whitespace-mode t)
+ '(neo-window-position (quote right))
+ '(package-selected-packages
+   (quote
+    (twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(whitespace-tab ((t (:foreground "#636363")))))
+
+
 (setq package-selected-packages
   '(afternoon-theme
     ag
@@ -46,30 +72,6 @@
     with-editor
     xclip))
 (package-install-selected-packages)
-
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;; and `package-pinned-packages`. Most users will not need or want to do this.
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(global-superword-mode t)
- '(global-whitespace-mode t)
- '(neo-window-position (quote right))
- '(package-selected-packages
-   (quote
-    (twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(whitespace-tab ((t (:foreground "#636363")))))
 
 ;; prevent emacs from creating backfile in the current repo
 (setq backup-directory-alist `(("." . "~/.saves")))
