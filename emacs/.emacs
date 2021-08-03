@@ -13,10 +13,9 @@
  ;; If there is more than one, they won't work right.
  '(global-superword-mode t)
  '(global-whitespace-mode t)
- '(neo-window-position (quote right))
+ '(neo-window-position 'right)
  '(package-selected-packages
-   (quote
-    (twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
+   '(typescript-mode twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
