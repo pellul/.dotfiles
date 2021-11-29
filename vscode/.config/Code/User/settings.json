@@ -54,5 +54,5 @@
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "all",
-    "window.menuBarVisibility": "compact",
+    "window.menuBarVisibility": "toggle",
 }
