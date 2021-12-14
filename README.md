@@ -38,6 +38,8 @@ Neofetch
 
 Ranger
 
+Ibus (ibus-daemon -drxR)
+
 TODO:
 
 - list fixes to occuring bugs (ssh-agent, etc...)
@@ -59,6 +61,8 @@ TODO:
 - Take a look at picom (instead of compton) https://github.com/yshui/picom
 
 - Make emacs installation file + change colors according to the palette
+
+- Have several themes: Hollow Knight, Nier, ...
 
 ----
 
