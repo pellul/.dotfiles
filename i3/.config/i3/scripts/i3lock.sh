@@ -32,11 +32,11 @@ convert $img \
     composite -gravity $gravity ./images/$waifu miff:- $img &&
     kill $lock_pid
 
-./quotes/quotes.sh &
-quotes_pid=$!
+#./quotes/quotes.sh &
+#quotes_pid=$!
 
 i3lock -utni $img
 
-kill $quotes_pid
+#kill $quotes_pid
 rm $img
 popd
