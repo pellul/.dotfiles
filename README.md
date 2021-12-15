@@ -2,44 +2,6 @@
 
 ⚠️  Work In Progress ⚠️
 
-## Dependencies
-
-stow
-
-i3-gaps
-
-compton (pimp my windows)
-
-kitty + zsh
-
-rofi (dmenu alternative)
-
-feh (wallpaper)
-
-conky (for fun)
-
-xrandr (display monitor manager)
-
-gnome-screenshot (to replace someday)
-
-polybar
-
-tmux
-
-emacs
-
-xss-lock
-
-ImageMagick
-
-Dunst
-
-Neofetch
-
-Ranger
-
-Ibus (ibus-daemon -drxR)
-
 TODO:
 
 - list fixes to occuring bugs (ssh-agent, etc...)
@@ -63,8 +25,3 @@ TODO:
 - Make emacs installation file + change colors according to the palette
 
 - Have several themes: Hollow Knight, Nier, ...
-
-----
-
-systemctl enable --user emacs
-systemctl start --user emacs
