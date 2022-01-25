@@ -175,12 +175,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always --no-startup-id $HOME/.config/wallpaper/.fehbg
+exec_always --no-startup-id $HOME/.config/wallpapers/.fehbg
 exec --no-startup-id conky -c ~/path/to/.conkyrc
 exec --no-startup-id xrandr --output HDMI-1-3 --auto --left-of HDMI-1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# bindsym $mod+Shift+l exec "i3lock -t -i /home/pellul/Images/wallpaper.png"
 bindsym $mod+Shift+l exec --no-startup-id "xss-lock -- xscreensaver-command -lock & $HOME/.config/i3/scripts/i3lock.sh"
 
 for_window [class=".*"] border pixel 2
