@@ -188,7 +188,7 @@ for_window [class=".*"] border pixel 2
 #gaps outer 5
 #gaps inner 5
 
-exec_always --no-startup-id compton
+# exec_always --no-startup-id compton
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 
 # start rofi (replaces dmenu)
