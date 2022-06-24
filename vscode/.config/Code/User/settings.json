@@ -7,7 +7,6 @@
     "editor.rulers": [80, 100],
     "editor.minimap.size": "fit",
     "editor.minimap.side": "left",
-    "window.zoomLevel": 0,
     "workbench.sideBar.location": "right",
     "workbench.activityBar.visible": false,
 
@@ -55,4 +54,5 @@
     "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "all",
     "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Dracula",
 }
