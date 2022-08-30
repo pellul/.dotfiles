@@ -85,4 +85,15 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
+
+if command -v mcfly &> /dev/null; then
+  eval "$(mcfly init bash)"
+  export MCFLY_RESULTS=50
+  # export MCFLY_INTERFACE_VIEW=BOTTOM # or TOP
+  export MCFLY_DISABLE_MENU=TRUE
+  # export MCFLY_HISTORY_LIMIT=10000
+else
+  echo "mcfly dependency lacks. (https://github.com/cantino/mcfly)"
+fi
+
 . "$HOME/.cargo/env"
