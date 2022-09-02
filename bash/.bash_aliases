@@ -20,3 +20,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias note='touch `date -u +"%Y%m%d"`'
 
+# https://www.reddit.com/r/linuxmasterrace/comments/cpos40/
+alias please='sudo'
+alias sorry='sudo $(history -p !!)'
