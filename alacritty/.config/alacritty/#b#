@@ -1,0 +1,20 @@
+
+     Status: Installed in ‘yaml-mode-0.0.15/’ (unsigned). [Delete]
+    Version: 0.0.15
+     Commit: fc5e1c58f94472944c4aa838f00f6adcac6fa992
+    Summary: Major mode for editing YAML files
+   Requires: emacs-24.1
+   Keywords: [data] [yaml] 
+ Maintainer: Vasilij Schneidermann <mail@vasilij.de>
+    Authors: Yoshiki Kurihara <clouder@gmail.com>
+             Marshall T. Vandegrift <llasram@gmail.com>
+Other versions: 20221022.920 (melpa), 0.0.15 (melpa-stable), 0.0.15 (nongnu).
+
+This is a major mode for editing files in the YAML data
+serialization format.  It was initially developed by Yoshiki
+Kurihara and many features were added by Marshall Vandegrift.  As
+YAML and Python share the fact that indentation determines
+structure, this mode provides indentation and indentation command
+behavior very similar to that of python-mode.
+
+[back]
