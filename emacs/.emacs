@@ -73,8 +73,18 @@
     xclip))
 (package-install-selected-packages)
 
-;; prevent emacs from creating backfile in the current repo
-(setq backup-directory-alist `(("." . "~/.saves")))
+ ;; prevent emacs from creating autosave in the current repo
+ (setq backup-directory-alist
+       `((".*" . ,temporary-file-directory)))
+ (setq auto-save-file-name-transforms
+       `((".*" ,temporary-file-directory t)))
+
+ ;; prevent emacs from creating lockfiles in the current repo
+ ;; If the options is not set (Emacs version < 28) then don't generate lockfiles
+(if (boundp 'lock-file-name-transforms)
+  (setq lock-file-name-transforms `((".*", temporary-file-directory t)))
+  (setq create-lockfiles nil))
+
 (setq version-control t     ;; Use version numbers for backups.
       kept-new-versions 10  ;; Number of newest versions to keep.
       kept-old-versions 0   ;; Number of oldest versions to keep.
