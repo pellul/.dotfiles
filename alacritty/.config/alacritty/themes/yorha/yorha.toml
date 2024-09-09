@@ -1,0 +1,30 @@
+[colors.normal]
+black = "#4D493E"
+blue = "#2E00B8"
+cyan = "#8be9fd"
+green = "#9D9884"
+magenta = "#2E00B8"
+red = "#b11f2c"
+white = "#f8f8f2"
+yellow = "#f1fa8c"
+
+[colors.primary]
+background = "#dad4bb"
+bright_foreground = "#000000"
+foreground = "#4e4b42"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.footer_bar]
+background = "#f8f8f2"
+foreground = "#4D493E"
+
+[font.normal]
+family = "NotoSans"
+style= "Regular"
+
+[window]
+dynamic_padding = true
+decorations = "None"
