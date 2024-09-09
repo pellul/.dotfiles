@@ -8,4 +8,6 @@ fi
 
 $HOME/.config/bash/banners/banner.sh
 
-. "$HOME/.cargo/env"
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+    exec startx
+fi

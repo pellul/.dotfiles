@@ -1,0 +1,14 @@
+import = ["/home/pellul/.config/alacritty/themes/dracula/dracula.toml"]
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Inconsolata"
+
+[scrolling]
+history = 0
+
+[shell]
+args = ["--login", "-c", "tmux attach || tmux"]
+program = "/usr/bin/bash"
