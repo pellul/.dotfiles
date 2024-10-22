@@ -198,10 +198,6 @@ bindsym $mod+Shift+d  exec "rofi -modi file-browser -show file-browser -theme si
 # Screenshot
 bindsym Print exec "gnome-screenshot -i"
 
-set $primary #3282B8
-set $secondary #1B262C
-set $accent #BBE1FA
-set $primary-dark #0f4c75
 
 # class                 border     bground    text       indicator  child_border
 client.focused          $primary   $secondary $accent    $primary   $primary

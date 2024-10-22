@@ -8,7 +8,10 @@
     "editor.minimap.size": "fit",
     "editor.minimap.side": "left",
     "workbench.sideBar.location": "right",
-    "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+        "tab.inactiveForeground": "#dfdfdf",
+        "tab.activeBorder": "#ffffff"
+    },
 
     // auto-format
     "files.trimFinalNewlines": true,
@@ -17,12 +20,14 @@
     // per language syntax
     "[javascript]": {
         "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
     },
     "[typescript]": {
         "editor.tabSize": 2
     },
     "[vue]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[sass]": {
         "editor.tabSize": 2
@@ -50,9 +55,30 @@
     // Bracket Pair Colorizer 2
     "bracket-pair-colorizer-2.forceIterationColorCycle": true,
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "all",
     "window.menuBarVisibility": "toggle",
     "workbench.colorTheme": "Dracula",
+    "workbench.activityBar.location": "hidden",
+    "telemetry.enableTelemetry": false,
+
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "editor.renderWhitespace": "all",
+
+    "[vue, javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "editor.stickyScroll.enabled": false,
+    "workbench.tree.indent": 20,
+    "telemetry.telemetryLevel": "off",
+    "vetur.completion.scaffoldSnippetSources": {
+        "workspace": "💼",
+        "user": "🗒️",
+        "vetur": "✌"
+    },
+    "editor.minimap.enabled": false,
 }

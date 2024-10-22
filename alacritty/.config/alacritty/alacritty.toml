@@ -1,0 +1,41 @@
+[colors.normal]
+black = "#000000"
+blue = "#957E72"
+cyan = "#DBD8CA"
+green = "#847977"
+magenta = "#5F5554"
+red = "#6C584C"
+white = "#F8F8F2"
+yellow = "#C8C2AA"
+
+[colors.primary]
+background = "#C8C2AA"
+bright_foreground = "#DBD8CA"
+foreground = "#847977"
+
+[colors.footer_bar]
+background = "#C8C2AA"
+foreground = "#847977"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Inconsolata"
+style= "Regular"
+
+[window]
+dynamic_padding = true
+decorations = "None"
+
+[scrolling]
+history = 0
+
+[shell]
+args = ["--login", "-c", "tmux attach || tmux"]
+program = "/usr/bin/bash"
+

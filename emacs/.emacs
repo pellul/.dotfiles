@@ -13,10 +13,9 @@
  ;; If there is more than one, they won't work right.
  '(global-superword-mode t)
  '(global-whitespace-mode t)
- '(neo-window-position (quote right))
+ '(neo-window-position 'right)
  '(package-selected-packages
-   (quote
-    (markdown-mode rust-mode yaml-mode yaml typescript-mode twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy))))
+   '(python-black markdown-mode rust-mode yaml-mode yaml typescript-mode twig-mode editorconfig tabbar ag highlight-parentheses diff-hl emmet-mode move-dup tt-mode projectile-git-autofetch xclip vue-mode telephone-line swiper-helm spacegray-theme python-mode ob-sql-mode neotree multiple-cursors expand-region magit counsel-projectile afternoon-theme ivy)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -128,6 +127,10 @@
 
 ;; multiple cursors
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
+(global-set-key (kbd "C-c m h") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
+
 
 ;; move and duplicate lines
 (move-dup-mode 1)
@@ -180,7 +183,7 @@
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
+;; (scroll-bar-mode -1)
 (setq inhibit-startup-screen t)
 ;; Start fullscreen (cross-platf)
 (add-hook 'window-setup-hook 'toggle-frame-fullscreen t)
@@ -252,4 +255,4 @@
 (put 'downcase-region 'disabled nil)
 
 (editorconfig-mode 1)
-(add-hook 'find-file-hook 'editorconfig-mode-apply)
+(add-hook 'find-file-hook 'editorconfig-mode)
