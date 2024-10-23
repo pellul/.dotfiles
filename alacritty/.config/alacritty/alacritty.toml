@@ -11,11 +11,11 @@ yellow = "#C8C2AA"
 [colors.primary]
 background = "#C8C2AA"
 bright_foreground = "#DBD8CA"
-foreground = "#847977"
+foreground = "#957E72"
 
 [colors.footer_bar]
 background = "#C8C2AA"
-foreground = "#847977"
+foreground = "#957E72"
 
 [colors.cursor]
 cursor = "CellForeground"
