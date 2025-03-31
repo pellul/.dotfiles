@@ -15,14 +15,19 @@ red = "$COLOR_RED"
 white = "$COLOR_WHITE"
 yellow = "$COLOR_YELLOW"
 
-[colors.primary]
-background = "$COLOR_BACKGROUND"
-bright_foreground = "$COLOR_BACKGROUND_LIGHT"
-foreground = "$COLOR_PRIMARY"
+[colors.bright]
+black = "$COLOR_LIGHT_BLACK"
+blue = "$COLOR_LIGHT_BLUE"
+cyan = "$COLOR_LIGHT_CYAN"
+green = "$COLOR_LIGHT_GREEN"
+magenta = "$COLOR_LIGHT_MAGENTA"
+red = "$COLOR_LIGHT_RED"
+white = "$COLOR_LIGHT_WHITE"
+yellow = "$COLOR_LIGHT_YELLOW"
 
-[colors.footer_bar]
-background = "$COLOR_BACKGROUND"
-foreground = "$COLOR_PRIMARY"
+[colors.primary]
+background = '$COLOR_BACKGROUND'
+foreground = "$COLOR_FOREGROUND"
 
 [colors.cursor]
 cursor = "CellForeground"
@@ -42,7 +47,7 @@ decorations = "None"
 [scrolling]
 history = 0
 
-[shell]
+[terminal.shell]
 args = ["--login", "-c", "tmux attach || tmux"]
 program = "/usr/bin/bash"
 

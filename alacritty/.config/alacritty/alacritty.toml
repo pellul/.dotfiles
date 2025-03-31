@@ -1,21 +1,26 @@
 [colors.normal]
-black = "#000000"
-blue = "#957E72"
-cyan = "#DBD8CA"
-green = "#847977"
-magenta = "#5F5554"
-red = "#6C584C"
-white = "#F8F8F2"
-yellow = "#C8C2AA"
+black = "#3d352a"
+blue = "#3da89e"
+cyan = "#b0c4de"
+green = "#86af80"
+magenta = "#deb887"
+red = "#cd5c5c"
+white = "#bbaa99"
+yellow = "#e8ae5b"
+
+[colors.bright]
+black = "#554444"
+blue = "#87ceeb"
+cyan = "#b0c4de"
+green = "#88cc22"
+magenta = "#996600"
+red = "#CC5533"
+white = "#ddccbb"
+yellow = "#ffa75d"
 
 [colors.primary]
-background = "#C8C2AA"
-bright_foreground = "#DBD8CA"
-foreground = "#957E72"
-
-[colors.footer_bar]
-background = "#C8C2AA"
-foreground = "#957E72"
+background = '#1c1c1c'
+foreground = "#bbaa99"
 
 [colors.cursor]
 cursor = "CellForeground"
@@ -35,7 +40,7 @@ decorations = "None"
 [scrolling]
 history = 0
 
-[shell]
+[terminal.shell]
 args = ["--login", "-c", "tmux attach || tmux"]
 program = "/usr/bin/bash"
 
