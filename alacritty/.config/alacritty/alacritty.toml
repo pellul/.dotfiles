@@ -19,8 +19,8 @@ white = "#ddccbb"
 yellow = "#ffa75d"
 
 [colors.primary]
-background = '#1c1c1c'
-foreground = "#bbaa99"
+foreground = '#DAC7B6'
+background = "#1d1c1a"
 
 [colors.cursor]
 cursor = "CellForeground"

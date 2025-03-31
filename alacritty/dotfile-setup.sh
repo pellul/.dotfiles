@@ -26,8 +26,8 @@ white = "$COLOR_LIGHT_WHITE"
 yellow = "$COLOR_LIGHT_YELLOW"
 
 [colors.primary]
-background = '$COLOR_BACKGROUND'
-foreground = "$COLOR_FOREGROUND"
+foreground = '$COLOR_FOREGROUND'
+background = "$COLOR_BACKGROUND"
 
 [colors.cursor]
 cursor = "CellForeground"
