@@ -95,5 +95,3 @@ if command -v mcfly &> /dev/null; then
 else
   echo "mcfly dependency lacks. (https://github.com/cantino/mcfly)"
 fi
-
-. "$HOME/.cargo/env"

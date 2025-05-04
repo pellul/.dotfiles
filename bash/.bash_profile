@@ -1,3 +1,7 @@
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx /usr/bin/i3
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -6,6 +10,10 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-$HOME/.config/bash/banners/banner.sh
+# $HOME/.config/bash/banners/banner.sh
 
-. "$HOME/.cargo/env"
+# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+#     exec startx
+# fi
+
+eval "$(ssh-agent -s)"
